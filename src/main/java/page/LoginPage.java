@@ -39,5 +39,15 @@ public class LoginPage {
 		SIGNIN_BUTTON_ELEMENT.click();
 	}
 	
+	public String getAlertMsg() {
+		String actualAlertText = driver.switchTo().alert().getText();
+		return actualAlertText;
+	}
+	
+	public void accetpAlert() {
+		driver.switchTo().alert().accept();
+	}
+	
+	
 
 }
